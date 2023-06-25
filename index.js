@@ -52,4 +52,8 @@ io.on("connection",(socket) => {
         io.emit("getUsers" , users);
         
     });
-})
+});
+
+server.listen(8900, () => {
+    console.log(`Server started on port ${8900}`);
+});
