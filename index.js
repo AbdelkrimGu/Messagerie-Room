@@ -36,6 +36,7 @@ io.on("connection",(socket) => {
     });
 
     socket.on("sendMessage" , ({senderId , receiverId , text}) => {
+        console.log(text);
         const user = getUser(receiverId);
         if(user){
             io.to(user.socketId).emit("getMessage" , {
